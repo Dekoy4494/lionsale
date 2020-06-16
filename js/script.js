@@ -27,16 +27,16 @@ let x = 0;
 style.style.transform = 'rotate(' + x + 'deg)';
 
 
-if (style.style.transform !== 'rotate(359deg)') {
-  setInterval(function() {
-    x += 3;
-    style.style.transform = 'rotate(' + x + 'deg)';
+// if (style.style.transform !== 'rotate(359deg)') {
+//   setInterval(function() {
+//     x += 3;
+//     style.style.transform = 'rotate(' + x + 'deg)';
     
-        if ( x > 360 ) {
-        x = 0
-      }
-  }, 40);
-} 
+//         if ( x > 360 ) {
+//         x = 0
+//       }
+//   }, 40);
+// } 
 
 // dots
 
