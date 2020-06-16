@@ -1,10 +1,865 @@
-/* Style.scss */
-.ba-menu{
-    display: flex;
-    align-items: center;
+* {
+  box-sizing: border-box;
 }
 
-.ba-menu__link {
-    color: inherit;
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+  display: none;
+}
+
+.horizontal-wrapper {
+  display: inline-flex;
+  height: 100vh;
+}
+/* Start page */
+.start-page {
+  background-image: url(../img/start-page-bg.png);
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: calc(100vh + 20px);
+  color: #d4d6d7;
+
+  &-container {
+    padding: 60px 210px 0px 110px;
+  }
+
+  &-wrapper .menu-burger {
+    position: relative;
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      border-bottom: 4px solid white;
+      left: 10px;
+      bottom: 18px;
+      width: 69px;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      border-bottom: 4px solid white;
+      left: 10px;
+      bottom: 27px;
+      width: 54px;
+    }
+  }
+
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .phone-number {
+      font-family: "Gilroy";
+      font-weight: 300;
+      font-size: 38px;
+      text-decoration: none;
+      color: #d4d6d7;
+    }
+  }
+
+  &-text {
+    width: 740px;
+    margin: 170px 0 0 110px;
+
+    & nav .menu {
+      padding: 0;
+      margin: 100px 0 150px 0;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+
+      & a {
+        text-decoration: none;
+        color: #d4d6d7;
+        font-family: "Gilroy";
+        font-weight: normal;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &-title {
+    font-family: "Gilroy";
+    font-weight: 100;
+    font-size: 60px;
+    margin: 0;
+  }
+
+  &-subtitle {
+    font-family: "Gilroy";
+    font-weight: 300;
+    font-size: 18px;
+    margin: 50px 0 0 0;
+    line-height: 1.5;
+  }
+
+  &-banner {
+    padding: 0 0 105px 180px;
+    position: relative;
+  }
+
+  &-bot {
+    display: flex;
+
+    & ul {
+      display: flex;
+      padding-left: 90px;
+      list-style: none;
+
+      & li + li {
+        padding-left: 15px;
+      }
+    }
+  }
+}
+
+.menu__link {
+  position: relative;
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid white;
+    left: -20px;
+    bottom: 10px;
+    width: 15px;
+  }
+}
+
+#banner-text {
+  position: absolute;
+  bottom: 35px;
+  left: 195px;
+}
+
+/* Payment */
+.payment-info {
+  width: 100vw;
+  position: relative;
+
+  &-container {
+    padding: 250px 575px 260px 180px;
+    position: relative;
+    width: 100%;
+  }
+
+  &-letter {
+    position: absolute;
+    top: -80px;
+    left: 40px;
+    font-size: 550px;
+    font-family: "Cormorant Garamond", serif;
+    opacity: 0.1;
+    margin: 0;
+  }
+
+  &-title {
+    font-family: "Gilroy";
+    font-weight: 100;
+    font-size: 75px;
+    color: #2e3339;
+    margin: 0;
+    margin-bottom: 55px;
+  }
+
+  &-text {
+    font-family: "Gilroy";
+    font-weight: 400;
+    line-height: 36px;
+    font-size: 16px;
+    width: 650px;
+
+    & + .payment-info-text {
+      margin: 65px 0 80px 0;
+    }
+  }
+
+  &-link {
     text-decoration: none;
+    color: black;
+    border: black solid 1px;
+    position: relative;
+    padding: 18px 50px 17px 21px;
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      border-bottom: 1px solid black;
+      left: 203px;
+      bottom: 22px;
+      width: 15px;
+    }
+  }
+}
+
+#particles-js,
+#particles-js2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 800px;
+  height: 700px;
+}
+
+//cases
+
+.cases {
+  width: 1405px;
+  display: flex;
+
+  &-wrapper {
+    background-image: url(../img/cases-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+
+    & h1 {
+      margin: 0;
+      font-family: "Gilroy";
+      font-weight: 100;
+      font-size: 100px;
+      position: absolute;
+      bottom: 110px;
+      right: -50px;
+      color: white;
+      transform: rotate(-90deg);
+    }
+  }
+  &-slide-text {
+    color: white;
+    font-family: "Gilroy";
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  &-link {
+    position: absolute;
+    right: 100px;
+    bottom: 95px;
+  }
+
+  &-all-link {
+    text-decoration: none;
+    color: white;
+    border: white solid 1px;
+    position: relative;
+    padding: 18px 50px 17px 21px;
+    position: absolute;
+    bottom: 110px;
+    left: 70px;
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      border-bottom: 1px solid white;
+      left: 203px;
+      bottom: 24px;
+      width: 15px;
+    }
+  }
+}
+
+.slide {
+  height: 50vh;
+  background-image: url(../img/slider-bg.png);
+  background-size: cover;
+  padding: 75px 100px;
+  min-width: 600px;
+  position: relative;
+}
+
+.big-num {
+  margin: 0;
+  font-family: "Gilroy";
+  font-weight: 900;
+  font-size: 104.5px;
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+
+  & + .slash {
+    color: white;
+    font-family: "Gilroy";
+    font-weight: 300;
+    font-size: 104.5px;
+    & + .small-num {
+      color: white;
+      font-family: "Gilroy";
+      font-weight: 200;
+      font-size: 40.64px;
+    }
+  }
+}
+
+.slick-track {
+  height: 50vh;
+}
+
+.slider {
+  width: 600px;
+}
+
+// analitycs
+
+.analytics {
+  width: 100vw;
+  position: relative;
+
+  &-container {
+    position: relative;
+    width: 100vw;
+    display: flex;
+  }
+
+  &-wrapper {
+    min-width: 1100px;
+    padding: 250px 200px 260px 180px;
+  }
+
+  &-letter {
+    position: absolute;
+    top: -80px;
+    left: 40px;
+    font-size: 550px;
+    font-family: "Cormorant Garamond", serif;
+    opacity: 0.1;
+    margin: 0;
+  }
+
+  &-title {
+    font-family: "Gilroy";
+    font-weight: 100;
+    font-size: 75px;
+    color: #2e3339;
+    margin: 0;
+    margin-bottom: 55px;
+  }
+
+  &-text {
+    font-family: "Gilroy";
+    font-weight: 400;
+    line-height: 36px;
+    font-size: 16px;
+    width: 650px;
+
+    & + .analytics-text {
+      margin: 65px 0 80px 0;
+    }
+  }
+
+  &-img {
+    background-image: url(../img/analytics-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+    & h1 {
+      margin: 0;
+      font-family: "Gilroy";
+      font-weight: 100;
+      font-size: 100px;
+      position: absolute;
+      bottom: 270px;
+      right: -100px;
+      color: white;
+      transform: rotate(-90deg);
+    }
+
+    &-text {
+      margin: 0;
+      position: absolute;
+      bottom: 150px;
+      color: white;
+      width: 400px;
+      left: 80px;
+      font-size: 24px;
+      line-height: 30px;
+      font-family: "Cormorant Garamond", serif;
+
+      & + p {
+        position: absolute;
+        bottom: 100px;
+        color: white;
+        left: 150px;
+        font-family: "Gilroy";
+        font-weight: 200;
+        font-size: 16px;
+
+        &::after {
+          display: block;
+          content: "";
+          position: absolute;
+          border-bottom: 1px solid white;
+          left: -26px;
+          bottom: 9px;
+          width: 18px;
+        }
+      }
+    }
+  }
+
+  &-link {
+    text-decoration: none;
+    font-family: "Gilroy";
+    font-weight: 300;
+    font-size: 16px;
+    color: black;
+    border: black solid 1px;
+    position: relative;
+    padding: 18px 50px 17px 21px;
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      border-bottom: 1px solid black;
+      left: 225px;
+      bottom: 24px;
+      width: 15px;
+    }
+  }
+}
+
+// MARKETING
+
+.marketing {
+  position: relative;
+
+  &-container {
+    position: relative;
+    display: flex;
+  }
+
+  &-wrapper {
+    min-width: 1510px;
+    padding: 250px 200px 260px 180px;
+    position: relative;
+  }
+
+  &-letter {
+    position: absolute;
+    top: -80px;
+    left: 40px;
+    font-size: 550px;
+    font-family: "Cormorant Garamond", serif;
+    opacity: 0.1;
+    margin: 0;
+  }
+
+  &-title {
+    font-family: "Gilroy";
+    font-weight: 100;
+    font-size: 75px;
+    color: #2e3339;
+    margin: 0;
+    margin-bottom: 55px;
+  }
+
+  &-text {
+    font-family: "Gilroy";
+    font-weight: 400;
+    line-height: 36px;
+    font-size: 16px;
+    width: 650px;
+
+    & + .marketing-text {
+      margin: 65px 0 80px 0;
+    }
+  }
+
+  &-img {
+    background-image: url(../img/marketing-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 800px;
+    height: 100vh;
+    position: relative;
+    & h1 {
+      margin: 0;
+      font-family: "Gilroy";
+      font-weight: 100;
+      font-size: 100px;
+      position: absolute;
+      bottom: 270px;
+      right: -100px;
+      color: white;
+      transform: rotate(-90deg);
+    }
+
+    &-text {
+      margin: 0;
+      position: absolute;
+      bottom: 150px;
+      color: white;
+      width: 400px;
+      left: 80px;
+      font-size: 24px;
+      line-height: 30px;
+      font-family: "Cormorant Garamond", serif;
+
+      & + p {
+        position: absolute;
+        bottom: 100px;
+        color: white;
+        left: 150px;
+        font-family: "Gilroy";
+        font-weight: 200;
+        font-size: 16px;
+
+        &::after {
+          display: block;
+          content: "";
+          position: absolute;
+          border-bottom: 1px solid white;
+          left: -26px;
+          bottom: 9px;
+          width: 18px;
+        }
+      }
+    }
+  }
+
+  &-link {
+    text-decoration: none;
+    font-family: "Gilroy";
+    font-weight: 300;
+    font-size: 16px;
+    color: black;
+    border: black solid 1px;
+    position: relative;
+    padding: 18px 50px 17px 21px;
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      border-bottom: 1px solid black;
+      left: 225px;
+      bottom: 24px;
+      width: 15px;
+    }
+  }
+}
+
+#particles-js2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 600px;
+  height: 700px;
+}
+
+// SALES
+
+.sales {
+  position: relative;
+
+  &-container {
+    position: relative;
+    display: flex;
+  }
+
+  &-wrapper {
+    min-width: 1510px;
+    padding: 250px 200px 260px 180px;
+    position: relative;
+  }
+
+  &-letter {
+    position: absolute;
+    top: -80px;
+    left: 40px;
+    font-size: 550px;
+    font-family: "Cormorant Garamond", serif;
+    opacity: 0.1;
+    margin: 0;
+  }
+
+  &-title {
+    font-family: "Gilroy";
+    font-weight: 100;
+    font-size: 75px;
+    color: #2e3339;
+    margin: 0;
+    margin-bottom: 55px;
+  }
+
+  &-text {
+    font-family: "Gilroy";
+    font-weight: 400;
+    line-height: 36px;
+    font-size: 16px;
+    width: 650px;
+  }
+
+  &-img {
+    background-image: url(../img/sales-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 800px;
+    height: 100vh;
+    position: relative;
+    & h1 {
+      margin: 0;
+      font-family: "Gilroy";
+      font-weight: 100;
+      font-size: 100px;
+      position: absolute;
+      bottom: 200px;
+      right: -50px;
+      color: white;
+      transform: rotate(-90deg);
+    }
+
+    &-text {
+      margin: 0;
+      position: absolute;
+      bottom: 150px;
+      color: white;
+      width: 500px;
+      left: 80px;
+      font-size: 24px;
+      line-height: 30px;
+      font-family: "Cormorant Garamond", serif;
+
+      & + p {
+        position: absolute;
+        bottom: 100px;
+        color: white;
+        left: 150px;
+        font-family: "Gilroy";
+        font-weight: 200;
+        font-size: 16px;
+
+        &::after {
+          display: block;
+          content: "";
+          position: absolute;
+          border-bottom: 1px solid white;
+          left: -26px;
+          bottom: 9px;
+          width: 18px;
+        }
+      }
+    }
+  }
+
+  &-link {
+    text-decoration: none;
+    font-family: "Gilroy";
+    font-weight: 300;
+    font-size: 16px;
+    color: black;
+    border: black solid 1px;
+    position: relative;
+    padding: 18px 50px 17px 21px;
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      border-bottom: 1px solid black;
+      left: 225px;
+      bottom: 24px;
+      width: 15px;
+    }
+  }
+}
+
+.tech__triangle {
+  position: absolute;
+  right: 35px;
+  bottom: 50px;
+  opacity: 0.1;
+}
+
+//pricing
+
+.pricing {
+  position: relative;
+
+  &-container {
+    position: relative;
+    display: flex;
+  }
+
+  &-wrapper {
+    min-width: 1510px;
+    padding: 250px 200px 260px 180px;
+    position: relative;
+  }
+
+  &-letter {
+    position: absolute;
+    top: -80px;
+    left: 40px;
+    font-size: 550px;
+    font-family: "Cormorant Garamond", serif;
+    opacity: 0.1;
+    margin: 0;
+  }
+
+  &-title {
+    font-family: "Gilroy";
+    font-weight: 100;
+    font-size: 75px;
+    color: #2e3339;
+    margin: 0;
+    margin-bottom: 55px;
+  }
+
+  &-text {
+    font-family: "Gilroy";
+    font-weight: 400;
+    line-height: 36px;
+    font-size: 16px;
+    width: 650px;
+
+    & + .marketing-text {
+      margin: 65px 0 80px 0;
+    }
+  }
+
+  &-img {
+    background-image: url(../img/pricing-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 800px;
+    height: 100vh;
+    position: relative;
+    & h1 {
+      margin: 0;
+      font-family: "Gilroy";
+      font-weight: 100;
+      font-size: 100px;
+      position: absolute;
+      bottom: 270px;
+      right: -50px;
+      color: white;
+      transform: rotate(-90deg);
+    }
+
+    &-text {
+      margin: 0;
+      position: absolute;
+      bottom: 150px;
+      color: white;
+      width: 400px;
+      left: 80px;
+      font-size: 24px;
+      line-height: 30px;
+      font-family: "Cormorant Garamond", serif;
+
+      & + p {
+        position: absolute;
+        bottom: 100px;
+        color: white;
+        left: 150px;
+        font-family: "Gilroy";
+        font-weight: 200;
+        font-size: 16px;
+
+        &::after {
+          display: block;
+          content: "";
+          position: absolute;
+          border-bottom: 1px solid white;
+          left: -26px;
+          bottom: 9px;
+          width: 18px;
+        }
+      }
+    }
+  }
+
+  &-link {
+    text-decoration: none;
+    font-family: "Gilroy";
+    font-weight: 300;
+    font-size: 16px;
+    color: black;
+    border: black solid 1px;
+    position: relative;
+    padding: 18px 50px 17px 21px;
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      border-bottom: 1px solid black;
+      left: 225px;
+      bottom: 24px;
+      width: 15px;
+    }
+  }
+}
+
+#particles-js3 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 600px;
+  height: 700px;
+}
+
+
+//SALES CHANNELS 
+
+.sales-map {
+  display: flex;
+  width: 100vw;
+}
+
+.sales-channels{
+  min-width: 2250px;
+}
+
+.header {
+  display: flex;
+  padding: 140px 0 90px 180px;
+  width: 1360px;
+  align-items: center;
+}
+
+.number{
+  font-size: 200px;
+  font-family: "Gilroy";
+    font-weight: 800;
+    color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+   & p {
+    margin: 0;
+   }
+}
+
+.title {
+  & h2 {
+    font-size: 75px;
+    font-family: "Gilroy";
+    font-weight: 100;
+    margin: 0;
+  }
+  & p {
+    font-size: 18px;
+    font-family: "Gilroy";
+    font-weight: 400;
+    margin: 15px 0 0 0;
+  }
+}
+
+.map-wrapper{
+  display: flex;
+  padding: 0 200px 190px 177px;
+  justify-content: space-between;
 }

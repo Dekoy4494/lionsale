@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "circletype": "^2.3.0",
     "gulp": "^4.0.2"
   },
   "devDependencies": {
